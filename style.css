@@ -1,0 +1,33 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.submit-area{
+    margin: 50px 50px;
+    padding: 20px;
+    box-shadow: 5px 5px 10px gray;
+    border-radius: 10px;
+}
+/* Second page style */
+#second-page{
+    display: none;
+}
+.deposite{
+    background-color: grey;
+    margin: 40px 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+.withdrow{
+    background-color: rgb(21, 141, 75);
+    margin: 40px 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+.balance{
+    background-color: rgb(29, 144, 189);
+    margin: 40px 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
