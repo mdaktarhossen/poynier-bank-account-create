@@ -11,23 +11,24 @@ blockArea.style.display='block'
 // second page event handale add
 const depositeBtn=document.getElementById('depositeBtn')
 depositeBtn.addEventListener('click', function(){
-  const depositeAmount=document.getElementById('deposite-Amount').value;
-  const depositeAmountNumber=parseFloat(depositeAmount);
+  const depositeAmountNumber=getInputNumber('deposite-Amount');
 
-  const currentDeposite=document.getElementById('current-Deposite').innerText;
-  const currentDepositeNumber=parseFloat(currentDeposite);
-  const totalDeposite=depositeAmountNumber+currentDepositeNumber;
-  document.getElementById('current-Deposite').innerText=totalDeposite;
-  
-  const currentBalance=document.getElementById('current-Balance').innerText;
-  const currentBalanceNumber=parseFloat(currentBalance);
-  const totalCurrentBalance=depositeAmountNumber+currentBalanceNumber;
-  document.getElementById('current-Balance').innerText=totalCurrentBalance;
-
+  spanTagUpdated('current-Deposite' ,depositeAmountNumber)
+  spanTagUpdated('current-Balance' ,depositeAmountNumber)
   document.getElementById('deposite-Amount').value="";
-
 })
-
-function spanTagUpdated(){
-
+const WithdrowButton=document.getElementById('WithdrowBtn');
+WithdrowButton.addEventListener('click', function(){
+const WithdrowAmountNumber=getInputNumber('Withdrow-Amount')
+})
+function getInputNumber(id){
+  const Amount=document.getElementById(id).value;
+const mountNumber=parseFloat(Amount);
+return AmountNumber;
+}
+function spanTagUpdated(id, depositeAmountNumber){
+  const current=document.getElementById(id).innerText;
+  const currentNumber=parseFloat(current);
+  const totalAmount=depositeAmountNumber+currentNumber;
+  document.getElementById(id).innerText=totalAmount;
 }
