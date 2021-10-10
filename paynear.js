@@ -1,36 +1,33 @@
-
-// FIRST PAGE EVENT HANDEL ADD
-const button = document.getElementById("btn");
-button.addEventListener("click", function () {
-  const loginArea = document.getElementById("login");
-  loginArea.style.display = "none";
-
-  const secondPage = document.getElementById("second-page");
-  secondPage.style.display = "block";
-});
-
-// SECOND PAGE EVENT HANDALE ADD
-const depositeButton=document.getElementById('depositeButton')
-depositeButton.addEventListener('click', function(){
-const depositevalu=document.getElementById('depositevalu').value;
-const depositeValuNumber=parseFloat(depositevalu);
-
-// const depositeAmount=document.getElementById('depositeAmount').innerText;
-// const depositeAmountNumber=parseFloat(depositeAmount);
-// const totalDeposite=depositeValuNumber+depositeAmountNumber;
-// document.getElementById('depositeAmount').innerText=totalDeposite;
-
-
-spanTagUpdeted('depositeAmount',depositeValuNumber )
-spanTagUpdeted('currentBalance', depositeValuNumber);
-
-document.getElementById('depositevalu').value='';
+// login area event add
+const enterBtn=document.getElementById('enterBtn');
+enterBtn.addEventListener('click', function(){
+const loginArea=document.getElementById('login-area')
+loginArea.style.display='none'
+// block area event add
+const blockArea=document.getElementById('second-page')
+blockArea.style.display='block'
 })
 
-function spanTagUpdeted(id, depositeValuNumber){
-  const currentBalance=document.getElementById(id).innerText;
-  const currentBalanceNumber=parseFloat(currentBalance);
-  const totalBalance=depositeValuNumber+currentBalanceNumber;
-  document.getElementById(id).innerText=totalBalance;
-}
+// second page event handale add
+const depositeBtn=document.getElementById('depositeBtn')
+depositeBtn.addEventListener('click', function(){
+  const depositeAmount=document.getElementById('deposite-Amount').value;
+  const depositeAmountNumber=parseFloat(depositeAmount);
 
+  const currentDeposite=document.getElementById('current-Deposite').innerText;
+  const currentDepositeNumber=parseFloat(currentDeposite);
+  const totalDeposite=depositeAmountNumber+currentDepositeNumber;
+  document.getElementById('current-Deposite').innerText=totalDeposite;
+  
+  const currentBalance=document.getElementById('current-Balance').innerText;
+  const currentBalanceNumber=parseFloat(currentBalance);
+  const totalCurrentBalance=depositeAmountNumber+currentBalanceNumber;
+  document.getElementById('current-Balance').innerText=totalCurrentBalance;
+
+  document.getElementById('deposite-Amount').value="";
+
+})
+
+function spanTagUpdated(){
+
+}

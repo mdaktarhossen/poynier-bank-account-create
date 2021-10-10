@@ -10,13 +10,13 @@
 </head>
 <body>
     <!-- Login area Even handel set -->
-    <div id="login">
+    <div id="login-area">
         <h1 class="text-center">Welcome To paynear</h1>
         <div class="submit-area">
            <h3>Login</h3>
                <input class="form-control" type="email" placeholder="Enter Your Valid E-mail" required><br>
              <input class="form-control" type="password" placeholder="Enter Your Password" required><br>
-          <button id="btn" class="btn btn-success">Enter</button>
+          <button id="enterBtn" class="btn btn-success">Enter</button>
         </div> 
     </div>
     <!-- second page Even Handale se -->
@@ -25,19 +25,19 @@
         <div class="col-md-4">
             <div class="deposite">
                 <h5>Deposite</h5>
-                    <h2>$ <span id="depositeAmount">00</span></h2>
+                    <h2>$ <span id="current-Deposite">00</span></h2>
                 </div>
             </div>
             <div class="col-sm-4">
                 <div class="withdrow">
                     <h5>Withdrow</h5>
-                    <h2>$00</h2>
+                    <h2>$ <span id="withdrowAmount">00</span></h2>
                 </div>
             </div>
             <div class="col-sm-4">
                 <div class="balance">
                     <h5>Balance</h5>
-                <h2>$ <span id="currentBalance">1250</span></h2>
+                <h2>$ <span id="current-Balance">1250</span></h2>
                 </div>
             </div>
         </div>
@@ -45,15 +45,15 @@
             <div class="col-sm-6">
                 <div class="submit-area">
                     <h1>Deposite</h1>
-                        <input id="depositevalu" class="form-control" type="text" placeholder="$Enter Your Deposite Amount"><br>
-                    <button id="depositeButton" class="btn btn-success">Deposite</button>
+                        <input id="deposite-Amount" class="form-control" type="text" placeholder="$Enter Your Deposite Amount"><br>
+                    <button id="depositeBtn" class="btn btn-success">Deposite</button>
                 </div>
             </div>
             <div class="col-sm-6">
                 <div class="submit-area">
                     <h1>Withdrow</h1>
-                        <input class="form-control" type="text" placeholder="$Enter Your Withdrow Amount"><br>
-                    <button class="btn btn-success">Withdrow</button>
+                        <input id="Withdrowvalue" class="form-control" type="text" placeholder="$Enter Your Withdrow Amount"><br>
+                    <button id="WithdrowBtn" class="btn btn-success">Withdrow</button>
                 </div>
             </div>
         </div>
